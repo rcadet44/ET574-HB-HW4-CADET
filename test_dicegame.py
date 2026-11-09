@@ -72,6 +72,23 @@ class TestDiceGame(unittest.TestCase):
         self.assertGreater(len(set(roll2_list)), 1)
 
     # --- Students: Add 3 more test cases below ---
+def test_custom_die_sides(self):
+        die = Die(sides=10)
+        for _ in range(100):
+            roll = die.roll()
+            self.assertIn(roll, range(1, 11))
+
+def test_default_die_sides(self):
+        die = Die()
+        for _ in range(100):
+            roll = die.roll()
+            self.assertIn(roll, range(1, 7))
+
+def test_die_returns_interger(self):
+        die = Die()
+        for _ in range(100):
+            roll = die.roll()
+            self.assertIsInstance(roll, int)
 
 
 
@@ -80,3 +97,5 @@ class TestDiceGame(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
