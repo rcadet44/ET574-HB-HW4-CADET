@@ -92,7 +92,10 @@ def test_die_returns_interger(self):
 
 
 
-
+def test_evaluate_roll_outcomes(self):
+	self.assertEqual(self.game.evaluate_roll(7), "Win")
+	self.assertEqual(self.game.evaluate_roll(2), "Lose")
+	self.assertEqual(self.game.evaluate_roll(5),"Roll Again")
 
 
 if __name__ == '__main__':
