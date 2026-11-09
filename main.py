@@ -4,10 +4,10 @@
 import random 
 
 class Die:
-    def __init__(self, sides=6):
-       self.sides = sides
+    """represent a die with a configurable numberof sides."""
 
     def roll(self):
+        """Roll the die and return a random number."""
         return random.randint(1, self.sides)
     
 class DiceGame:
